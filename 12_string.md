@@ -12,4 +12,4 @@ Se si vuole estrarre un pezzo di stringa dall'interno di una stringa si può usa
 
 ## Ricerca
 
-Per trovare 
+`stringa.find(STRINGA)` restituisce il primo indice in stringa in cui è presente la sottostringa `STRINGA`. Nel caso `STRINGA` non sia mai presente in `stringa` verrà ritornato il numero speciale `string::npos`. Ad esempio `string("mondo ciao ciao").find("ciao")` restituisce `6`, ovvero la posizione del primo "ciao". Invece `string("test").find("ciao")` restituisce `string::npos`.
