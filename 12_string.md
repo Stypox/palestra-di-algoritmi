@@ -6,6 +6,7 @@ Nei precedenti tutorial è già stato usato il tipo `string` per contenere una s
 - `stringa1 + stringa2` concatena due stringhe. Funziona anche l'operatore `+=`. (ad es. `string("Ciao") + string(" ") + string("mondo")` fa `string("Ciao mondo")`)
 - Si può usare `stringa1 == stringa2` per vedere se due stringhe sono uguali. Anche `<`, `<=`, `>`, `>=` funzionano, e confrontano *lessicograficamente* due stringhe (ovvero nello stesso modo in cui farebbe un dizionario di una qualche lingua)
 - Attenzione che una stringa di C **non equivale** ad una di C++, quindi `string("a") + string("b")` fa `string("ab")`, mentre `"a" + "b"` non ha significato in quanto è la somma tra due puntatori a `char`. Nel dubbio potete sempre mettere `string()` attorno ad ogni stringa di C per essere sicuri che non succedano cose strane.
+- Anche per `string` può essere costoso creare una copia ogni volta che ne viene passata una ad una funzione. Come per `vector`, basta mettere una `&` dopo `string` nei parametri della funzione per prevenire la copia. Ad esempio `void modifica(string& stringa)`.
 
 ```cpp
 string a = "albero";

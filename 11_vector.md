@@ -60,7 +60,7 @@ for(int i = 0; i < numeri.size(); ++i) {
 
 ## Passare un vettore ad una funzione
 
-Ovviamente i `vector` sono dei tipi come altri, quindi possono essere passati come parametro di una funzione senza problemi. Però, quando un parametro viene passato ad una funzione, esso viene copiato per fare in modo che la funzione non possa modificare la copia originale di quella variabile ma riceva una copia tutta per sè. Poichè i `vector` possono essere costosi da copiare, conviene prevenirlo mettendo una `&` dopo il tipo del parametro della funzione, per dire al compilatore di passare tale parametro *per reference*, ovvero non copiarlo.
+Ovviamente i `vector` sono dei tipi come altri, quindi possono essere passati come parametro di una funzione senza problemi. Però, quando un parametro viene passato ad una funzione, esso viene copiato per fare in modo che la funzione non possa modificare la copia originale di quella variabile ma riceva una copia tutta per sè. Poichè i `vector` possono essere costosi da copiare, conviene prevenirlo mettendo una `&` dopo il tipo del parametro della funzione, per dire al compilatore di passare tale parametro *per reference*, ovvero non copiarlo. Però passare parametri alle funzioni senza copiarli può permettere alle funzioni di modificare le variabili che passiamo loro; se vogliamo evitare ciò (ad esempio perchè una funzione che scrive a schermo non deve modificare il contenuto del vettore che gli passiamo) possiamo mettere un `const` prima del tipo del parametro.
 ```cpp
 // quando questa funzione viene chiamata, il vettore passato
 // al posto di v viene copiato (operazione costosa)
@@ -73,7 +73,8 @@ void printVettore(vector<int> v) {
 
 // quando questa funzione viene chiamata, il vettore passato al posto
 // di v non viene copiato ma la funzione ne ha accesso diretto
-void printVettoreOttimizzato(vector<int>& v) {
+void printVettoreOttimizzato(const vector<int>& v) {
+	// v.push_back(5); errore! v e' dichiarato const, quindi non puo' essere modificato 
 	for (int i = 0; i < v.size(); ++i) {
 		cout << v << " ";
 	}
