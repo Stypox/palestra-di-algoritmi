@@ -111,7 +111,7 @@ int main() {
 ```
 
 ## Esercizi
-- Scrivi un programma che chiede all'utente dei numeri finchè non viene inserito -1, e ad ogni numero `i` che viene fornito dall'utente, scriva in output l`i-1`-esimo numero che l'utente ha inserito (oppure -1 se tale numero non esiste). Ad esempio, se inserisco, in ordine, `5 0 1 4 3`, il programma dovrebbe scrivermi, in ordine, `-1 5 0 -1 4`.
 - Scrivi un programma che chiede all'utente dei numeri finchè non viene inserito -1 e poi li scrive nell'ordine opposto in cui sono stati inseriti (attenzione agli indici!).
+- Scrivi un programma che chiede all'utente dei numeri finchè non viene inserito -1, e ad ogni numero `i` che viene fornito dall'utente, scriva in output l`i-1`-esimo numero che l'utente ha inserito (oppure -1 se tale numero non esiste). Ad esempio, se inserisco, in ordine, `5 0 1 4 3`, il programma dovrebbe scrivermi, in ordine, `-1 5 0 -1 4`.
 - Scrivi una funzione che, preso come parametro un vettore di numeri (attenzione a fare in modo che questo vettore non venga copiato), ne calcola il minimo e il massimo e li ritorna in un `pair<>`. La *signature* della funzione sarebbe quindi qualcosa come `pair<int, int> f(vector<int>& v)`.
-- Scrivi una funzione che calcola la lunghezza di una linea spezzata a partire dal vettore di punti che la compongono. Si possono fare infatti anche dei `vector` di `pair` in questo modo: `vector<pair<float, float>>`.
+- (difficile) Scrivi una funzione che calcola la lunghezza di una linea spezzata a partire dal vettore di punti che la compongono. Si possono fare infatti anche dei `vector` di `pair` in questo modo: `vector<pair<float, float>>`.
