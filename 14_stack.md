@@ -7,15 +7,15 @@ Le pile sono dei *container* che funzionano in modo simile alle pile di piatti a
 - `q.size()` restituisce il numero di elementi in coda
 
 ```cpp
-queue<int> q;
-q.push(5);
-q.push(6);
-q.push(7);
+stack<int> s;
+s.push(5);
+s.push(6);
+s.push(7);
 
-// scrive 3 5
-cout << q.size() << " " << q.front() << endl;
+// scrive 3 7
+cout << s.size() << " " << s.top() << endl;
 
-q.pop();
+s.pop();
 // scrive 2 6
-cout << q.size() << " " << q.front() << endl;
+cout << s.size() << " " << s.top() << endl;
 ```

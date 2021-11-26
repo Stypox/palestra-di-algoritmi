@@ -7,15 +7,15 @@ Le code sono dei *container* che funzionano come le code ai negozi: quando arriv
 - `q.size()` restituisce il numero di elementi nella pila
 
 ```cpp
-stack<int> s;
-s.push(5);
-s.push(6);
-s.push(7);
+queue<int> q;
+q.push(5);
+q.push(6);
+q.push(7);
 
-// scrive 3 7
-cout << s.size() << " " << s.top() << endl;
+// scrive 3 5
+cout << q.size() << " " << q.front() << endl;
 
-s.pop();
+q.pop();
 // scrive 2 6
-cout << s.size() << " " << s.top() << endl;
+cout << q.size() << " " << q.front() << endl;
 ```
