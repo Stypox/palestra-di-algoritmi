@@ -41,7 +41,7 @@ for (int i = 0; i < 10; ++i) {
 	cin >> numero;
 	minimoFinora = min(minimoFinora, numero);
 }
-cout << "Il minimo tra i 10 numeri che hai inserito è " << minimoFinora << "\n";
+cout << "Il minimo tra i 10 numeri che hai inserito e' " << minimoFinora << "\n";
 ```
 
 #### Esercizi

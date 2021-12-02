@@ -57,7 +57,7 @@ string divinaCommedia = "Nel mezzo del cammin di nostra vita...";
 
 // si può usare cout anche con le variabili!
 // dato che y non ha un valore impostato potrebbe venir scritto un numero a caso
-cout << "x e' uguale a " << x << ", y e' uguale a " << y << " e la temperatura è di " << temperatura << "°C" << endl;
+cout << "x e' uguale a " << x << ", y e' uguale a " << y << " e la temperatura e' di " << temperatura << "°C" << endl;
 cout << "La divina commedia inizia con: " << divinaCommedia << endl;
 ```
 
@@ -207,7 +207,7 @@ cin >> x >> y;
 bool xySonoUguali = x == y;
 if (x < y) { // condizione tra le parentesi tonde
 	cout << "x e' minore di y" << endl;
-} else if (xySonoUguali) { // la condizione è salvata nella variabile xySonoUguali
+} else if (xySonoUguali) { // la condizione e' salvata nella variabile xySonoUguali
 	cout << "x e' uguale a y" << endl;
 } else {
 	cout << "x e' maggiore di y" << endl;

@@ -51,7 +51,7 @@ Ovviamente una funzione può ricevere 0 parametri, ad esempio:
 
 ```cpp
 void errore() {
-	cout << "C'è stato un errore" << endl;
+	cout << "C'e' stato un errore" << endl;
 }
 ```
 
