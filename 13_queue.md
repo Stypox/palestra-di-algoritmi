@@ -19,3 +19,7 @@ q.pop();
 // scrive 2 6
 cout << q.size() << " " << q.front() << endl;
 ```
+
+## Problemi
+
+- Kattis: [ferryloading3](https://open.kattis.com/problems/ferryloading3)

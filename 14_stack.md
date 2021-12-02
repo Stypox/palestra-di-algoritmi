@@ -19,3 +19,7 @@ s.pop();
 // scrive 2 6
 cout << s.size() << " " << s.top() << endl;
 ```
+
+## Problemi
+
+- Kattis: [pairingsocks](https://open.kattis.com/contests/wg4y5t/problems/pairingsocks), [backspace](https://open.kattis.com/contests/wg4y5t/problems/backspace)

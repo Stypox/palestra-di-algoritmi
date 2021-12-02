@@ -71,3 +71,8 @@ cout << (a.find("stringa") == string::npos) << endl; // scrive 0
 #### Esercizi
 - Scrivi un programma che chiede all'utente una stringa che contiene al più una virgola, e se tale stringa contiene una virgola la taglia in quel punto e scrive in output separatamente la parte di sinistra e la parte di destra.
 - (difficile) Scrivi una funzione che prende come parametro due stringhe (attento a passarle *per reference*, così non vengono copiate) restituisce un `vector<string>` contenendo i pezzi della prima stringa che si ottengono spezzandola nei punti in cui è uguale alla seconda. Ad esempio `funzione("ah ciao albero ciao", "ia")` dovrebbe restituire gli elementi `string("ah c")`, `string("o albero c")`, `string("o")`.
+
+
+## Problemi
+
+- Kattis: [autori](https://open.kattis.com/contests/wg4y5t/problems/autori), [filip](https://open.kattis.com/problems/filip)
