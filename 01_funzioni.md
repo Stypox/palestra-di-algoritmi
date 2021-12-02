@@ -94,9 +94,10 @@ Le funzioni che chiamano sè stesse dentro il loro codice sono dette *ricorsive*
 #### Esercizi
 - Scrivi una funzione che, preso come parametro `n`, calcola la somma dei primi `n` numeri naturali usando la ricorsione (e senza usare cicli).
 - Scrivi una funzione `gcd` che, presi in input due interi `a` e `b` (puoi assumere `a >= b`), calcola il loro massimo comune divisore (Greatest Common Divisor). La formula ricorsiva per calcolare il `gcd` tra due numeri è:
-	- `gcd(a, 0) = a`
-	- `gcd(a, b) = gcd(b, a mod b)`
+	- `gcd(a, 0) = a`, ovvero, se il secondo parametro passato alla funzione è 0, allora la funzione deve ritornare il primo
+	- `gcd(a, b) = gcd(b, a mod b)`, ovvero, se la condizione sopra non è soddisfatta, il massimo comune divisore tra `a` e `b` è uguale al massimo comune divisore tra `b` e il resto della divisione di `a` per `b`
 
 
 ## Problemi
 
+- Kattis: [temperatureconfusion](https://open.kattis.com/problems/temperatureconfusion) (usa il GCD)
