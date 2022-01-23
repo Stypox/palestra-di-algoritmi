@@ -1,74 +1,59 @@
-#include<bits/stdc++.h>
-#include<stdint.h>
-//idea generale, non funziona
+#include <bits/stdc++.h>
 using namespace std;
-int64_t cost[200001];
+#define int int64_t
 
-int64_t n,k;
+int N, K;
+vector<int> V;
 
-int64_t low(int64_t val){
-	if(val==0)
-	 	return 0;
-	int64_t valid, start, end, cur;
-	valid=start=end=cur=0;
-	
-	while(end<n){
-		if(cur+cost[end]<val){
-			cur+=cost[end++];
-			continue;
+int numWithSmallerCost(int cost) {
+	int result = 0, end = 0, sum = 0;
+	for (int start = 0; start < N; ++start) {
+		while(end < N && sum + V[end] <= cost) {
+			sum += V[end];
+			++end;
 		}
-		valid+=end-start;
-		cur-=cost[start++];
+		result += end-start;
+		sum -= V[start];
 	}
-	
-	return valid+(end-start)*(end-start+1)/2;
+	return result;
 }
 
-void find(int64_t val, int pos){
-	int64_t valid, start, end, cur;
-	valid=start=end=cur=0;
-	
-	while(end<n){
-		if(cur+cost[end]<=val){
-			cur+=cost[end++];
-			continue;
-		} 
-		if(cur==val){
-			pos--;
-			if(pos==0){
-				cout<<start<<" "<<end-1<<endl;
-				return;
+signed main() {
+	cin >> N >> K;
+
+	V.resize(N);
+	for (int n = 0; n < N; ++n) {
+		cin >> V[n];
+	}
+
+	// binary search the biggest cost such that numWithSmallerCost(m) < K
+	int a=0, b=300000000000000LL;
+	while (b > a+1) {
+		int m = (b+a)/2;
+
+		if (numWithSmallerCost(m) < K) {
+			a = m;
+		} else {
+			b = m;
+		}
+	}
+
+	int remainingWithEqualCost = K - numWithSmallerCost(a);
+	assert(remainingWithEqualCost > 0);
+	int end = 0, sum = 0;
+	for (int start = 0; start < N; ++start) {
+		while(end < N && sum + V[end] <= a + 1) {
+			sum += V[end];
+			++end;
+		}
+		if (sum == a + 1) {
+			--remainingWithEqualCost;
+			if (remainingWithEqualCost == 0) {
+				cout << start << " " << end - 1 << endl;
+				break;
 			}
 		}
-		cur-=cost[start++];
+		sum -= V[start];
 	}
-	cout<<start<<" "<<end-1<<endl;
-	return;
-}
-
-int64_t bsearch(int64_t min, int64_t max, int k){//max escluso
-	if(min+1<=max){
-		return min;
-	}
-	int64_t mid=(min+max)/2;
-	//cout<<mid<<": "<<low(mid)<<endl;
-	if(low(mid)>=k){
-		return bsearch(min, mid, k);
-	}else{
-		return bsearch(mid, max, k);
-	}
-}
-
-int main(){
-	
-	cin>>n>>k;
-	int64_t sum=0;
-	for(int a=0;a<n;a++){
-		cin>>cost[a];
-		sum+=cost[a];
-	}
-	int value=bsearch(0, sum+1, k);
-	/*printf("value: %d\n", value);
-	printf("find: %d %d\n", value, k-low(value));*/
-	find(value, k-low(value));
+	assert(remainingWithEqualCost == 0);
 }
