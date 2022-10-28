@@ -1,0 +1,19 @@
+piattaforma allenamenti:
+https://training.olinfo.it
+
+dispense 
+https://github.com/stypox/palestra-di-algoritmi
+
+problemi 14/10
+https://training.olinfo.it/#/task/easy1/statement
+https://training.olinfo.it/#/task/easy2/statement
+https://training.olinfo.it/#/task/easy3/statement
+
+problemi 21/10
+https://training.olinfo.it/#/task/array/statement
+https://training.olinfo.it/#/task/ois_sensor/statement
+https://training.olinfo.it/#/task/ois_sign/statement
+
+problemi 28/10
+https://training.olinfo.it/#/task/noccioline/statement <-- molto bello
+https://training.olinfo.it/#/task/ois_calcolatrice/statement
