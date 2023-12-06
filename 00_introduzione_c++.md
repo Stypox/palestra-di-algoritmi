@@ -220,8 +220,62 @@ if (x < y) { // condizione tra le parentesi tonde
 - Quando vuoi controllare se due variabili sono uguali all'interno di un `if`, stai attento ad usare l'operatore `==`! Prova a vedere cosa succede se usi `=` al suo posto (spoiler: se va bene errori di compilazione, se va male il programma fa cose diverse da quelle che ci si aspetta).
 
 
+## Cicli
+
+Se si vuole eseguire un pezzo di codice più volte ripetutamente si può usare un ciclo. Il ciclo più semplice di tutti è il ciclo `while(condizione) {...}`, che ripete il blocco di codice tra le parentesi grafe finchè la condizione tra le parentesi tonde resta vera. La condizione viene controllata ogni volta subito prima di eseguire il blocco di codice, ovvero subito prima di ogni *iterazione*. Una volta che la condizione non e' più vera, l'esecuzione riprende normalmente da subito sotto.
+
+```cpp
+// all'inizio -1 < 0, quindi entriamo nel ciclo
+int numero = -1;
+
+// continua a chiedere un numero all'utente finche' non ne inserisce uno positivo
+while (numero < 0) {
+	// queste linee tra {} sono il codice che viene ripetuto
+	cout << "Inserisci un numero non negativo: ";
+	cin >> numero;
+}
+
+// quando finisce il ciclo, siamo sicuri di avere un numero >= 0
+cout << "Bravo, hai inserito un numero positivo o zero! " << numero << "\n";
+```
+
+Un altro tipo di ciclo comunemente usato è il `for(inizializzazione; condizione; incremento) {...}`. Le quattro parti che lo compongono sono:
+- inizializzazione: qui si può inizializzare o dichiarare una variabile da usare come contatore, questo codice viene eseguito **solo una volta subito prima** di entrare nel ciclo
+- condizione: qui si mette una condizione che, come nel `while`, viene controllata **prima di ogni *iterazione***
+- incremento: qui si mette il codice che modifica il contatore, ad esempio incrementandolo di 1, questo codice viene eseguito **alla fine di ogni *iterazione***
+- `{...}`: come per il `while`, questo è il blocco di codice da eseguire ad ogni iterazione
+
+```cpp
+// l'uso piu' comune di un ciclo for e' per contare da 0 a N-1
+for (int i=0; i<37; i=i+1) {
+	// scrive tutti i numeri da 0 a 36 separati da spazio
+	// i e' il contatore, che iniziera' da 0 e si fermera' prima
+	// di 37 (ovvero a 36), e ad ogni iterazione incrementera' di 1
+	cout << i << " ";
+}
+
+// il ciclo while qui sotto fa la stessa identica cosa del for
+// qui sopra, ma come vedete e' piu' lungo da scrivere
+int i=0;
+while (i<37) {
+	cout << i << " ";
+	i=i+1;
+}
+```
+
+Per un controllo più fine dei cicli esistono i seguenti comandi:
+- `break;` interrompe il ciclo immediatamente e continua l'esecuzione subito sotto di esso
+- `continue;` completa immediatamente l'iterazione corrente, passando comunque dall'incremento e dalla condizione prima di iniziare un'eventuale iterazione successiva
+
+#### Esercizi
+
+- scrivi un programma che scrive "ciao" su `cout` all'infinito
+- scrivi un programma che prende in input da `cin` due interi `a` e `b` e poi scrive in output su `cout` tutti i numeri interi `x` tali che `a <= x <= b`
+- scrivi un programma che legge 10 numeri da `cin`, ma esce immediatamente scrivendo "errore" se viene passato un numero negativo (puoi usare `break;`)
+
+
 ## Problemi
 
 Ecco un elenco di problemi semplici presi da varie piattaforme per familiarizzare con C++:
-- Olinfo: [easy1](https://training.olinfo.it/#/task/easy1/statement), [easy2](https://training.olinfo.it/#/task/easy2/statement), [easy3](https://training.olinfo.it/#/task/easy3/statement)
+- Olinfo: [easy1](https://training.olinfo.it/#/task/easy1/statement), [biglietti](https://training.olinfo.it/#/task/ois_biglietti/statement), [easy2](https://training.olinfo.it/#/task/easy2/statement), [easy3](https://training.olinfo.it/#/task/easy3/statement)
 - Kattis: [cold](https://open.kattis.com/problems/cold), [qaly](https://open.kattis.com/problems/qaly)
