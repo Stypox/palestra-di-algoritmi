@@ -75,4 +75,5 @@ cout << (a.find("stringa") == string::npos) << endl; // scrive 0
 
 ## Problemi
 
+- Olinfo: [calcolatrice](https://training.olinfo.it/#/task/ois_calcolatrice/statement)
 - Kattis: [autori](https://open.kattis.com/contests/wg4y5t/problems/autori), [filip](https://open.kattis.com/problems/filip)

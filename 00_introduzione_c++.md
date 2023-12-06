@@ -276,6 +276,6 @@ Per un controllo più fine dei cicli esistono i seguenti comandi:
 
 ## Problemi
 
-Ecco un elenco di problemi semplici presi da varie piattaforme per familiarizzare con C++:
-- Olinfo: [easy1](https://training.olinfo.it/#/task/easy1/statement), [biglietti](https://training.olinfo.it/#/task/ois_biglietti/statement), [easy2](https://training.olinfo.it/#/task/easy2/statement), [easy3](https://training.olinfo.it/#/task/easy3/statement)
+Ecco un elenco di problemi semplici, circa in ordine di difficoltà, presi da varie piattaforme per familiarizzare con C++:
+- Olinfo: [biglietti](https://training.olinfo.it/#/task/ois_biglietti/statement), [easy1](https://training.olinfo.it/#/task/easy1/statement), [array](https://training.olinfo.it/#/task/array/statement), [easy2](https://training.olinfo.it/#/task/easy2/statement), [easy3](https://training.olinfo.it/#/task/easy3/statement), [sign](https://training.olinfo.it/#/task/ois_sign/statement)
 - Kattis: [cold](https://open.kattis.com/problems/cold), [qaly](https://open.kattis.com/problems/qaly)

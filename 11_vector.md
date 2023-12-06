@@ -120,4 +120,5 @@ int main() {
 ## Problemi
 
 Questi problemi si possono probabilmente risolvere anche senza usare `vector`, ma cercate di usarlo per allenamento!
+- Olinfo: [sensor](https://training.olinfo.it/#/task/ois_sensor/statement), [noccioline](https://training.olinfo.it/#/task/noccioline/statement), [salta](https://training.olinfo.it/#/task/oii_salta/statement), [powerline](https://training.olinfo.it/#/task/ois_powerline/statement)
 - Kattis: [peasoup](https://open.kattis.com/problems/peasoup), [missingnumbers](https://open.kattis.com/contests/wg4y5t/problems/missingnumbers), [eventplanning](https://open.kattis.com/problems/eventplanning), [basicprogramming1](https://open.kattis.com/problems/basicprogramming1)
