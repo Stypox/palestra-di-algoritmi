@@ -1,0 +1,6 @@
+[book]
+authors = ["Alessio Zeni", "Fabio Giovanazzi"]
+language = "it"
+multilingual = false
+src = "src"
+title = "Palestra di algoritmi"
